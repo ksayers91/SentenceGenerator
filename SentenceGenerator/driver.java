@@ -1,7 +1,11 @@
 import java.util.*;
 import java.io.*;
 import java.text.*;
-
+///////////////////////////////////////////////////////////////////////////////////////
+//Main driver of the program. Once the bigrams have been processed and counted
+// they are output into the Apach hadoop HDFS (shared file storage system). From there
+// the file is retrieve and stored locally parsing by this application.
+//////////////////////////////////////////////////////////////////
 public class driver {
 
 	public static void main(String[] args) throws Exception {
@@ -31,7 +35,7 @@ public class driver {
 			else
 				unigramCounts.put(arr[0], Integer.parseInt(arr[2]));
 			*/
-			
+			//Store of the unigrams, along with building their individual bigram maps.
 			if (nGrams.containsKey(arr[0])) {
 				Unigram val = (Unigram) nGrams.get(arr[0]);
 				val.addAssociatedBigrams(tmpBigram, Integer.parseInt(arr[2]));
@@ -54,6 +58,7 @@ public class driver {
 		//System.out.println("Bigram: 'over there'\t" + "Unigram Count: " + (int) unigramCounts.get("over") + "\tBigram Count: " + (int) bigramCounts.get("over there"));
 		//System.out.println("Unigram Count:" + (int) unigramCounts.get("over"));
 		
+		//THE ALL MIGHTY USER INTERFACE
 		Scanner sc= new Scanner(System.in);
 		String tmp = "";
 		while (true) {
