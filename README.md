@@ -31,4 +31,4 @@ Bugs:
 Issues & limitations:
 - Many features were still to be worked on. Including a better user interface and ability to pass whole files or file url locations.
 - Only able to achieve about 50% paralellization. While still decent and more efficient, near full paralellization would have been nice and is achievable at some point with this specific implementation.
-- Did work with Skala when setting up and configuring Apache Hadoop MapReduce, and well as Apache Apache Spark.
+- Did work with Scala when setting up and configuring Apache Hadoop MapReduce, and well as Apache Apache Spark.
